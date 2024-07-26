@@ -31,7 +31,7 @@ public class DiaryController {
     @GetMapping("/api/diaries")
     public ResponseEntity<DiaryAllResponse> findAllDiaries() {
         return ResponseEntity.ok()
-                .body(diaiesService.findDiaries());
+                .body(diaryService.findDiaries());
     }
 
     @GetMapping("/api/diaries/{diaryId}")
