@@ -82,7 +82,7 @@
   </tr>
 </table>
 
-[Figma]()
+[Figma](https://www.figma.com/design/bXiQkcJZLPFtTeuCXBtil7/myongji)
 
 ##  프로젝트 소개
 ### 프로젝트 기간
