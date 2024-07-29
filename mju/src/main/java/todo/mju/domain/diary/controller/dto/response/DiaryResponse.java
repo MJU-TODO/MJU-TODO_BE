@@ -5,19 +5,19 @@ import todo.mju.domain.diary.entity.Diary;
 
 @Builder
 public class DiaryResponse {
-    private final String title;
-    private final String content;
+    private final String diaryTitle;
+    private final String diaryContent;
 
     @Builder
-    public DiaryResponse(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public DiaryResponse(String diaryTitle, String diaryContent) {
+        this.diaryTitle = diaryTitle;
+        this.diaryContent = diaryContent;
     }
 
     public static DiaryResponse from(Diary diary) {
         return DiaryResponse.builder()
-                .title(diary.getTitle())
-                .content(diary.getContent())
+                .diaryTitle(diary.getDiaryTitle())
+                .diaryContent(diary.getDiaryContent())
                 .build();
     }
 }

@@ -9,23 +9,23 @@ import java.time.LocalDateTime;
 @Getter
 public class DiaryDto {
     public final Long diaryId;
-    private final String title;
-    private final String content;
+    private final String diaryTitle;
+    private final String diaryContent;
     private final LocalDateTime createdAt;
 
     @Builder
-    public DiaryDto(Long diaryId, String title, String content, LocalDateTime createdAt) {
+    public DiaryDto(Long diaryId, String diaryTitle, String diaryContent, LocalDateTime createdAt) {
         this.diaryId = diaryId;
-        this.title = title;
-        this.content = content;
+        this.diaryTitle = diaryTitle;
+        this.diaryContent = diaryContent;
         this.createdAt = createdAt;
     }
 
     public static DiaryDto of(Diary diary) {
         return DiaryDto.builder()
                 .diaryId(diary.getDiaryId())
-                .title(diary.getTitle())
-                .content(diary.getContent())
+                .diaryTitle(diary.getDiaryTitle())
+                .content(diary.getDiaryContent())
                 .createdAt(diary.getCreatedAt())
                 .build();
     }

@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class UpdateDiaryRequest {
-    private String title;
-    private String content;
+    private String diaryTitle;
+    private String diaryContent;
 }

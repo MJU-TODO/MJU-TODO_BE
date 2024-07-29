@@ -6,13 +6,13 @@ import todo.mju.domain.diary.entity.Diary;
 @Getter
 public class RegisterDiaryRequest {
 
-    private String title;
-    private String content;
+    private String diaryTitle;
+    private String diaryContent;
 
     public Diary toEntity() {
         return Diary.builder()
-                .title(title)
-                .content(content)
+                .diaryTitle(diaryTitle)
+                .diaryContent(diaryContent)
                 .build();
     }
 }
