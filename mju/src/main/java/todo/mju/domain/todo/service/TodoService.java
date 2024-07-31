@@ -34,4 +34,6 @@ public class TodoService {
         todo.update(requestDto.getTodo(), requestDto.getIsFinish());
         return todo;
     }
+
+    public void delete(long id) { }
 }

@@ -33,4 +33,5 @@ public class SchoolService {
         school.update(requestDto.getSchoolTitle());
         return school;
     }
+    public void delete(long id) { }
 }
