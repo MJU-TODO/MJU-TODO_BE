@@ -42,4 +42,14 @@ public class TodoController {
         Todo updateTodo = todoService.update(todoId, requestDto);
         return ResponseEntity.ok().body(updateTodo);
     }
+
+    @DeleteMapping("/api/todo/{todoId}")
+    public ResponseEntity<Void> deleteTodo(@PathVariable long todoId) {
+        try {
+            todoService.delete(todoId);
+        } catch(Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.noContent().build();
+    }
 }

@@ -37,4 +37,14 @@ public class SchoolController {
         School updateSchool = schoolService.update(schoolId, requestDto);
         return ResponseEntity.ok().body(updateSchool);
     }
+
+    @DeleteMapping("/api/school/{schoolId}")
+    public ResponseEntity<Void> deleteTodo(@PathVariable long todoId) {
+        try {
+            schoolService.delete(todoId);
+        } catch(Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.noContent().build();
+    }
 }
